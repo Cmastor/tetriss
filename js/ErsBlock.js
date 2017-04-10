@@ -40,36 +40,36 @@ class ErsBlock extends Thread {
      * 分别对应对7种模型的反转得到的28种状态
      */
     public final static int[][] STYLES = {// 共28种状态
-{ 0x0f00, 0x4444, 0x0f00, 0x4444 }, // 长条型的四种状态
-{ 0x04e0, 0x0464, 0x00e4, 0x04c4 }, // 'T'型的四种状态
-{ 0x4620, 0x6c00, 0x4620, 0x6c00 }, // 反'Z'型的四种状态
-{ 0x2640, 0xc600, 0x2640, 0xc600 }, // 'Z'型的四种状态
-{ 0x6220, 0x1700, 0x2230, 0x0740 }, // '7'型的四种状态
-{ 0x6440, 0x0e20, 0x44c0, 0x8e00 }, // 反'7'型的四种状态
-{ 0x0660, 0x0660, 0x0660, 0x0660 }, // 方块的四种状态
-};
+        { 0x0f00, 0x4444, 0x0f00, 0x4444 }, // 长条型的四种状态
+        { 0x04e0, 0x0464, 0x00e4, 0x04c4 }, // 'T'型的四种状态
+        { 0x4620, 0x6c00, 0x4620, 0x6c00 }, // 反'Z'型的四种状态
+        { 0x2640, 0xc600, 0x2640, 0xc600 }, // 'Z'型的四种状态
+        { 0x6220, 0x1700, 0x2230, 0x0740 }, // '7'型的四种状态
+        { 0x6440, 0x0e20, 0x44c0, 0x8e00 }, // 反'7'型的四种状态
+        { 0x0660, 0x0660, 0x0660, 0x0660 }, // 方块的四种状态
+    };
 
-private GameCanvas canvas;
+    private GameCanvas canvas;
 
-private ControlPanel panel;
+    private ControlPanel panel;
 
-private ErsBox[][] boxes = new ErsBox[BOXES_ROWS][BOXES_COLS];
+    private ErsBox[][] boxes = new ErsBox[BOXES_ROWS][BOXES_COLS];
 
-private int style, y, x, level;
+    private int style, y, x, level;
 
-private boolean moving = true;
+    private boolean moving = true;
 
-private int[][] canvasData;
+    private int[][] canvasData;
 
-private int[][] recData;
+    private int[][] recData;
 
-private ObjectInputStream in;
+    private ObjectInputStream in;
 
-private ObjectOutputStream out;
+    private ObjectOutputStream out;
 
-private int numLose;
+    private int numLose;
 
-private boolean fullLine = false;
+    private boolean fullLine = false;
 
 /**
  * 构造函数，产生一个特定的块
