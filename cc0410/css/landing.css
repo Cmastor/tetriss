@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+    /*font-family: "微软雅黑";*/
+}
+div{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background: url(../img/bg1.png) no-repeat;
+    background-size:100%;
+    box-sizing:border-box;  /*怪异盒模型，这样border就在宽高里面了*/
+    border:#bbb 10px ridge;
+}
+button {
+    width: 204px;
+    height: 77px;
+    margin: 200px auto;
+    display: block;
+    background: url(../img/start.png) no-repeat;
+    border: none;
+}
+button:hover {
+    opacity: 0.6;
+}
