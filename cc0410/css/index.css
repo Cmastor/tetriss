@@ -10,11 +10,8 @@ span {
 }
 #box {
     width: 100%;
-<<<<<<< HEAD:css/index.css
-=======
     height: 700px;
     overflow: hidden;
->>>>>>> 7724acaa2b789e685e1b0a9bc6139c186933518d:cc0410/css/index.css
     font:25px/25px 宋体;
     color:#9f9;
     box-sizing:border-box;  /*怪异盒模型，这样border就在宽高里面了*/
