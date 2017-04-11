@@ -1,53 +1,37 @@
 /**
  * Created by Administrator on 2017/4/10.
  */
-
-/**
- * 块类，继承自线程类（Thread） 由 4 * 4 个方格（ErsBox）构成一个块， 控制块的移动、下落、变形等
- */
-class ErsBlock extends Thread {
-    /**
-     * 一个块占的行数是4行
-     */
-    public final static int BOXES_ROWS = 4;
-
-    /**
-     * 一个块占的列数是4列
-     */
-    public final static int BOXES_COLS = 4;
-
-    /**
-     * 让升级变化平滑的因子，避免最后几级之间的速度相差近一倍
-     */
-    public final static int LEVEL_FLATNESS_GENE = 3;
-
-    /**
-     * 相近的两级之间，块每下落一行的时间差别为多少(毫秒)
-     */
-    public final static int BETWEEN_LEVELS_DEGRESS_TIME = 50;
-
-    /**
-     * 方块的样式数目为7
-     */
-    private final static int BLOCK_KIND_NUMBER = 7;
-
-    /**
-     * 每一个样式的方块的反转状态种类为4
-     */
-    private final static int BLOCK_STATUS_NUMBER = 4;
-
+/** 块，由 4 * 4 个方格（ErsBox）构成一个块， 控制块的移动、下落、变形等 */
+function ErsBlock(){
+    var BOXES_ROWS = 4;//一个块占的行数是4行
+    var BOXES_COLS = 4;//一个块占的列数是4列
+    var LEVEL_FLATNESS_GENE = 3;//让升级变化平滑的因子，避免最后几级之间的速度相差近一倍
+    var BETWEEN_LEVELS_DEGRESS_TIME = 50;//相近的两级之间，块每下落一行的时间差别为多少(毫秒)
+    var BLOCK_KIND_NUMBER = 7;//方块的样式数目为7
+    var BLOCK_STATUS_NUMBER = 4;//每一个样式的方块的反转状态种类为4
     /**
      * 分别对应对7种模型的反转得到的28种状态
      */
-    public final static int[][] STYLES = {// 共28种状态
+    var STYLES = {
         { 0x0f00, 0x4444, 0x0f00, 0x4444 }, // 长条型的四种状态
         { 0x04e0, 0x0464, 0x00e4, 0x04c4 }, // 'T'型的四种状态
         { 0x4620, 0x6c00, 0x4620, 0x6c00 }, // 反'Z'型的四种状态
         { 0x2640, 0xc600, 0x2640, 0xc600 }, // 'Z'型的四种状态
         { 0x6220, 0x1700, 0x2230, 0x0740 }, // '7'型的四种状态
         { 0x6440, 0x0e20, 0x44c0, 0x8e00 }, // 反'7'型的四种状态
-        { 0x0660, 0x0660, 0x0660, 0x0660 }, // 方块的四种状态
-    };
+        { 0x0660, 0x0660, 0x0660, 0x0660 } // 方块的四种状态
+    }
+
+
+
+
+}
+/**
+ * 块类，继承自线程类（Thread） 由 4 * 4 个方格（ErsBox）构成一个块， 控制块的移动、下落、变形等
+ */
+class ErsBlock extends Thread {
+
+
 
     private GameCanvas canvas;
 
