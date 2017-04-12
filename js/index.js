@@ -1,4 +1,3 @@
-	var author="Angel";
 	var map=eval("["+Array(23).join("0x801,")+"0xfff]");
 	//设置下落方块的形状
 	var tatris=[
