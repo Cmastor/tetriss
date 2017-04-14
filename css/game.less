@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+ol{
+  list-style: none;
+}
+@font-color:#666;
+@border-color: #bbbbbb;
+@xuanzhuan: #dadada;
+@radius:0.5rem;
+@bg-color: #ffffff;
+@media screen and (max-width: 768px){
+  body,html{
+    width: 100%;
+    height:100%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:992px){
+  body,html{
+    width: 100%;
+    height:100%;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px){
+  body,html{
+    width: 100%;
+    height:100%;
+    font-size: 20px;
+  }
+}
+
+.head{
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  border-bottom: 0.2rem solid @border-color;
+  font-size: 2rem;
+  font-family: 方正舒体;
+  color: @font-color;
+  margin-bottom: 1.5rem;
+}
+.cbox{
+  width: 98%;
+  margin: 0 auto;
+  height: 65%;
+  display: -webkit-box;
+  border: 0.2rem solid @border-color;
+  border-radius: @radius;
+  margin-bottom: 2rem;
+}
+.gamebox{
+  -webkit-box-flex:7;
+  border-right: 0.2rem solid @border-color;
+  position: relative;
+}
+.game{
+  position: absolute;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin: auto;
+}
+/*=====================================================================*/
+.console{
+  -webkit-box-flex: 2;
+}
+.sign{
+  width: 100%;
+  height: 10rem;
+  border-bottom: 0.2rem solid @border-color;
+}
+.ctrl{
+  width: 100%;
+  height: 100%;
+}
+button{
+  outline: none;
+  background: @bg-color;
+  display: block;
+  margin: 0.5rem auto;
+  font-size:1.5rem;
+  color: @font-color;
+  padding: 0.3rem 0.6rem ;
+  border: 0.1rem solid @border-color;
+  border-radius: @radius;
+}
+.scorebox{
+  font-size:1.5rem;
+  width: 50%;
+  text-align: center;
+  margin:1.5rem auto;
+}
+.lrbox{
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+}
+.left{
+  float: left;
+}
+.up{
+  float: left;
+  outline: none;
+  background: @xuanzhuan;
+  font-size:2rem;
+  color: @font-color;
+  padding: 1rem 1rem ;
+  border: 0.1rem solid @border-color;
+  border-radius: @radius;
+  margin: 0 2rem;
+}
+.right{
+  float: right;
+}
+.down{
+  padding: 0.3rem 2rem;
+}
+canvas{
+  background-image:url("../img/beijing.png") ;
+}

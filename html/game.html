@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>TetrisGame</title>
+    <link rel="stylesheet/less" type="text/css" href="../css/game.less">
+    <script type="text/javascript" src="../js/less.js"></script>
+</head>
+<body>
+    <header id="head" class="head">俄罗斯方块</header>
+    <section id="cbox" class="cbox">
+        <div class="gamebox" id="gamebox">
+            <canvas class="game" id="canvas" width="500px" height="1000px">
+            </canvas>
+        </div>
+                <div class="console">
+                    <div class="sign"></div>
+                    <div class="ctrl">
+                        <button class="keyss" id="keyss">开始</button>
+                        <button class="keyend" id="keyend">结束游戏</button>
+                        <button class="reset" id="reset">重置</button>
+                        <p class="scorebox">得分：<span class="score" id="score">0</span></p>
+                        <button class="delline">消除行数: <span class="dlnumber" id="dlnumber">0</span></button>
+                        <button class="grade">等级:<span class="gradenumber" id="gradenumber">0</span></button>
+                    </div>
+                </div>
+    </section>
+    <footer class="key">
+        <div class="lrbox">
+            <button class="left" id="left">←</button>
+            <button class="up" id="up">旋转</button>
+            <button class="right" id="right">→</button>
+        </div>
+        <button class="down" id="down">↓</button>
+    </footer>
+    <script type="text/javascript" src="../js/game.js"></script>
+</body>
+</html>
